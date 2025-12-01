@@ -1,0 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Script loaded successfully!");
+    const paragraph = document.querySelector('p');
+    if (paragraph) {
+        paragraph.textContent = "My JavaScript file updated this paragraph!";
+    }
+});
