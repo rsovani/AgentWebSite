@@ -15,8 +15,17 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+			            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+			            Country: 'Spain',
+			            Language: 'es'
+			          });
+			        });
+			
 			embeddedservice_bootstrap.settings.shouldOpenLinksInSameTab = true;
 			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+			
 			embeddedservice_bootstrap.init(
 				'00DMA000003XnGM',
 				'Sov_Messaging_Channel',
@@ -75,7 +84,7 @@
     btn.style.border = "none";
     btn.style.cursor = "pointer";
     btn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
-    btn.style.backgroundColor = "#0070d2";
+    btn.style.backgroundColor = "#4CAF50";
     btn.style.color = "#ffffff";
     btn.style.display = "inline-flex";
     btn.style.alignItems = "center";
