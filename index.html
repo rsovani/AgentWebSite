@@ -16,6 +16,7 @@
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 			embeddedservice_bootstrap.settings.shouldOpenLinksInSameTab = true;
+			ebeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 			embeddedservice_bootstrap.init(
 				'00DMA000003XnGM',
 				'Sov_Messaging_Channel',
@@ -59,7 +60,7 @@
 
     var btn = document.createElement("button");
     btn.id = "leap-chat-cta";
-    btn.textContent = "Talk with Agentforce! ;)";
+    btn.textContent = "Chat with Leappy, your AI Assistant!";
 
     btn.style.position = "fixed";
     btn.style.right = "24px";
@@ -80,7 +81,7 @@
     btn.style.justifyContent = "center";
 
     btn.addEventListener("mouseenter", function () {
-      btn.style.transform = "scale(1.03)";
+      btn.style.transform = "scale(1.05)";
     });
     btn.addEventListener("mouseleave", function () {
       btn.style.transform = "scale(1)";
