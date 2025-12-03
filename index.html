@@ -9,6 +9,25 @@
 
 
 	<p>Now we also have the agent....look at the nice button in lower right part of the page</p>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DMA000003XnGM',
+				'Sov_Messaging_Channel',
+				'https://leapmotor--dev01.sandbox.my.site.com/ESWSovMessagingChannel1764751682244',
+				{
+					scrt2URL: 'https://leapmotor--dev01.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://leapmotor--dev01.sandbox.my.site.com/ESWSovMessagingChannel1764751682244/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 	     
 
 </body>
