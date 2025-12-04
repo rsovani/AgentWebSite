@@ -17,6 +17,8 @@
 			//embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 			
 			window.addEventListener("onEmbeddedMessagingReady", () => {
+						console.log("onEmbeddedMessagingReady fired in initEmbeddedMessaging");
+
 			            embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
 			            Country: 'Spain',
 			            Language: 'es'
@@ -138,6 +140,15 @@
     }
   });
 
+
+	window.addEventListener("onEmbeddedMessagingReady", () => {
+		console.log("onEmbeddedMessagingReady fired on window");
+			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+			Country: 'Spain',
+			Language: 'es'
+		  });
+		});
+	
   window.addEventListener("onEmbeddedMessagingWindowMaximized", function () {
     console.log("onEmbeddedMessagingWindowMaximized fired");
     var es = window.embeddedservice_bootstrap;
